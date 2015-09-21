@@ -1,0 +1,6 @@
+
+public interface Matriz {
+	
+	public static double[] trasladar(double[] puntoInicial, double[] vectorTraslacion);
+
+}

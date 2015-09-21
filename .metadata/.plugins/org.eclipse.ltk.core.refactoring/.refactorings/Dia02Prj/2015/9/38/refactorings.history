@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Ventana.java&apos; to &apos;Dia3Rrj/src&apos;&#x0D;&#x0A;- Original project: &apos;Dia02Prj&apos;&#x0D;&#x0A;- Destination element: &apos;Dia3Rrj/src&apos;&#x0D;&#x0A;- Original element: &apos;Ventana.java&apos;" description="Copy compilation unit" destination="=Dia3Rrj/src" element1="/src&lt;{Ventana.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1442258078226" units="1" version="1.0"/>
+</session>

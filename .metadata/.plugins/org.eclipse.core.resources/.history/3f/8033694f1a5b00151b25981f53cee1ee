@@ -1,0 +1,146 @@
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+
+public class Ventana extends JFrame implements Matriz{
+	
+	public static int ESCALA = 20;
+	public static double[] matrizSegundoCuadrante = {-8, 0};
+	public static double[] matrizTercerCuadrante = {-8, -10};
+	public static double[] matrizCuartoCuadrante = {0, -10};
+
+	@Override
+	public void paint(Graphics g) {
+		g.drawLine(convertirPuntoX(-100), convertirPuntoY(0), 
+				convertirPuntoX(100), convertirPuntoY(0));
+		g.drawLine(convertirPuntoX(0), convertirPuntoY(100), 
+				convertirPuntoX(0), convertirPuntoY(-100));
+		
+	// Dibujar el poligono
+		g.drawLine((convertirPuntoX(2)), (convertirPuntoY(1)), 
+				(convertirPuntoX(4)), (convertirPuntoY(5)));
+		
+		g.drawLine((convertirPuntoX(4)), (convertirPuntoY(5)), 
+				(convertirPuntoX(6)), (convertirPuntoY(1)));
+		
+		g.drawLine((convertirPuntoX(6)), (convertirPuntoY(1)), 
+				(convertirPuntoX(4)), (convertirPuntoY(2)));
+		
+		g.drawLine((convertirPuntoX(4)), (convertirPuntoY(2)), 
+				(convertirPuntoX(2)), (convertirPuntoY(1)));
+		
+	// Declarar puntos iniciales
+		double[] puntoInicial1 = new double[4];
+		puntoInicial1[0] = 2;
+		puntoInicial1[1] = 1;
+		puntoInicial1[2] = 4;
+		puntoInicial1[3] = 5;
+		
+		double[] puntoInicial2 = new double[4];
+		puntoInicial2[0] = 4;
+		puntoInicial2[1] = 5;
+		puntoInicial2[2] = 6;
+		puntoInicial2[3] = 1;
+		
+		double[] puntoInicial3 = new double[4];
+		puntoInicial3[0] = 6;
+		puntoInicial3[1] = 1;
+		puntoInicial3[2] = 4;
+		puntoInicial3[3] = 2;
+		
+		double[] puntoInicial4 = new double[4];
+		puntoInicial4[0] = 4;
+		puntoInicial4[1] = 2;
+		puntoInicial4[2] = 2;
+		puntoInicial4[3] = 1;
+	
+	// Dibujar poligono en segundo cuadrante
+		
+		double[] puntoSegundoCuadrante1= trasladar(puntoInicial1, 
+				matrizSegundoCuadrante);
+		g.drawLine(convertirPuntoX((int)puntoSegundoCuadrante1[0]), convertirPuntoY((int)puntoSegundoCuadrante1[1]),
+				convertirPuntoX((int)puntoSegundoCuadrante1[2]), convertirPuntoY((int)puntoSegundoCuadrante1[3]));
+		
+		double[] puntoSegundoCuadrante2= trasladar(puntoInicial2, 
+				matrizSegundoCuadrante);
+		g.drawLine(convertirPuntoX((int)puntoSegundoCuadrante2[0]), convertirPuntoY((int)puntoSegundoCuadrante2[1]),
+				convertirPuntoX((int)puntoSegundoCuadrante2[2]), convertirPuntoY((int)puntoSegundoCuadrante2[3]));
+		
+		double[] puntoSegundoCuadrante3= trasladar(puntoInicial3, 
+				matrizSegundoCuadrante);
+		g.drawLine(convertirPuntoX((int)puntoSegundoCuadrante3[0]), convertirPuntoY((int)puntoSegundoCuadrante3[1]),
+				convertirPuntoX((int)puntoSegundoCuadrante3[2]), convertirPuntoY((int)puntoSegundoCuadrante3[3]));
+		
+		double[] puntoSegundoCuadrante4= trasladar(puntoInicial4, 
+				matrizSegundoCuadrante);
+		g.drawLine(convertirPuntoX((int)puntoSegundoCuadrante4[0]), convertirPuntoY((int)puntoSegundoCuadrante4[1]),
+				convertirPuntoX((int)puntoSegundoCuadrante4[2]), convertirPuntoY((int)puntoSegundoCuadrante4[3]));
+		
+	
+		
+		double[] puntoTercerCuadrante1= trasladar(puntoInicial1, 
+				matrizTercerCuadrante);
+		g.drawLine(convertirPuntoX((int)puntoTercerCuadrante1[0]), convertirPuntoY((int)puntoTercerCuadrante1[1]),
+				convertirPuntoX((int)puntoTercerCuadrante1[2]), convertirPuntoY((int)puntoTercerCuadrante1[3]));
+		
+		double[] puntoTercerCuadrante2= trasladar(puntoInicial2, 
+				matrizTercerCuadrante);
+		g.drawLine(convertirPuntoX((int)puntoTercerCuadrante2[0]), convertirPuntoY((int)puntoTercerCuadrante2[1]),
+				convertirPuntoX((int)puntoTercerCuadrante2[2]), convertirPuntoY((int)puntoTercerCuadrante2[3]));
+		
+		double[] puntoTercerCuadrante3= trasladar(puntoInicial3, 
+				matrizTercerCuadrante);
+		g.drawLine(convertirPuntoX((int)puntoTercerCuadrante3[0]), convertirPuntoY((int)puntoTercerCuadrante3[1]),
+				convertirPuntoX((int)puntoTercerCuadrante3[2]), convertirPuntoY((int)puntoTercerCuadrante3[3]));
+		
+		double[] puntoTercerCuadrante4= trasladar(puntoInicial4, 
+				matrizTercerCuadrante);
+		g.drawLine(convertirPuntoX((int)puntoTercerCuadrante4[0]), convertirPuntoY((int)puntoTercerCuadrante4[1]),
+				convertirPuntoX((int)puntoTercerCuadrante4[2]), convertirPuntoY((int)puntoTercerCuadrante4[3]));
+				
+				
+		
+		// Dibujar poligono en Tercer cuadrante
+		
+		
+		double[] puntoCuartoCuadrante1= trasladar(puntoInicial1, 
+				matrizCuartoCuadrante);
+		g.drawLine(convertirPuntoX((int)puntoCuartoCuadrante1[0]), convertirPuntoY((int)puntoCuartoCuadrante1[1]),
+				convertirPuntoX((int)puntoCuartoCuadrante1[2]), convertirPuntoY((int)puntoCuartoCuadrante1[3]));
+		
+		double[] puntoCuartoCuadrante2= trasladar(puntoInicial2, 
+				matrizCuartoCuadrante);
+		g.drawLine(convertirPuntoX((int)puntoCuartoCuadrante2[0]), convertirPuntoY((int)puntoCuartoCuadrante2[1]),
+				convertirPuntoX((int)puntoCuartoCuadrante2[2]), convertirPuntoY((int)puntoCuartoCuadrante2[3]));
+		
+		double[] puntoCuartoCuadrante3= trasladar(puntoInicial3, 
+				matrizCuartoCuadrante);
+		g.drawLine(convertirPuntoX((int)puntoCuartoCuadrante3[0]), convertirPuntoY((int)puntoCuartoCuadrante3[1]),
+				convertirPuntoX((int)puntoCuartoCuadrante3[2]), convertirPuntoY((int)puntoCuartoCuadrante3[3]));
+		
+		double[] puntoCuartoCuadrante4= trasladar(puntoInicial4, 
+				matrizCuartoCuadrante);
+		g.drawLine(convertirPuntoX((int)puntoCuartoCuadrante4[0]), convertirPuntoY((int)puntoCuartoCuadrante4[1]),
+				convertirPuntoX((int)puntoCuartoCuadrante4[2]), convertirPuntoY((int)puntoCuartoCuadrante4[3]));
+	}
+	
+	private int convertirPuntoX(int x) {
+		int centro = this.getWidth() / 2;
+		return centro + x * ESCALA;
+	}
+	
+	private int convertirPuntoY(int y) {
+		int centro = this.getHeight() / 2;
+		return centro - y * ESCALA;
+	}
+
+	@Override
+	public double[] trasladar(double[] puntoInicial, double[] vectorTraslacion) {
+		double[] resultado = {
+				puntoInicial[0] + vectorTraslacion[0], 
+				puntoInicial[1] + vectorTraslacion[1], 
+				puntoInicial[2] + vectorTraslacion[0], 
+				puntoInicial[3] + vectorTraslacion[1]};
+		return resultado;
+	}
+}
