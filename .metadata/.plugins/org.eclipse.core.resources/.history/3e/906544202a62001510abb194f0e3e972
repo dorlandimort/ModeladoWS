@@ -28,13 +28,13 @@ public class Ventana extends JFrame {
 		
 	}
 	
-	private int convertirPuntoX(double x) {
-		double centro = this.getWidth() / 2.0;
-		return (int) (centro + x * ESCALA);
+	private int convertirPuntoX(int x) {
+		int centro = this.getWidth() / 2;
+		return centro + x * ESCALA;
 	}
 	
-	private int convertirPuntoY(double y) {
-		double centro = this.getHeight() / 2.0;
-		return (int) (centro - y * ESCALA);
+	private int convertirPuntoY(int y) {
+		int centro = this.getHeight() / 2;
+		return centro - y * ESCALA;
 	}
 }
