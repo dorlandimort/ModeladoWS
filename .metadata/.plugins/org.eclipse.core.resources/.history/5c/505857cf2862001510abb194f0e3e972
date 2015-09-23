@@ -100,7 +100,6 @@ public class Ventana extends JFrame {
 		g.drawLine( convertirPuntoX(puntoEscaladoH[0]), convertirPuntoY(puntoEscaladoH[1]),
 				 convertirPuntoX(puntoEscaladoA[0]), convertirPuntoY(puntoEscaladoA[1]));
 		
-	// Tercer figura
 		k = 1.2;
 		
 		puntoEscaladoA = operaciones.escalar(puntoInicialA, 2, k);

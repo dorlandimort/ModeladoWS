@@ -43,45 +43,45 @@ public class Ventana extends JFrame {
 		double[] puntoSegundoCuadrante1= operaciones.trasladar(puntoInicial1, 
 				matrizSegundoCuadrante);
 		
-		g.drawLine(convertirPuntoX((int) puntoSegundoCuadrante1[0]), convertirPuntoY((int) puntoSegundoCuadrante1[1]),
-				convertirPuntoX((int) puntoSegundoCuadrante1[2]), convertirPuntoY((int) puntoSegundoCuadrante1[3]));
+		g.drawLine(convertirPuntoX( puntoSegundoCuadrante1[0]), convertirPuntoY( puntoSegundoCuadrante1[1]),
+				convertirPuntoX( puntoSegundoCuadrante1[2]), convertirPuntoY(puntoSegundoCuadrante1[3]));
 		
 		double[] puntoSegundoCuadrante2= operaciones.trasladar(puntoInicial2, 
 				matrizSegundoCuadrante);
-		g.drawLine(convertirPuntoX((int) puntoSegundoCuadrante2[0]), convertirPuntoY((int) puntoSegundoCuadrante2[1]),
-				convertirPuntoX((int) puntoSegundoCuadrante2[2]), convertirPuntoY((int) puntoSegundoCuadrante2[3]));
+		g.drawLine(convertirPuntoX((int) puntoSegundoCuadrante2[0]), convertirPuntoY(puntoSegundoCuadrante2[1]),
+				convertirPuntoX((int) puntoSegundoCuadrante2[2]), convertirPuntoY(puntoSegundoCuadrante2[3]));
 		
 		double[] puntoSegundoCuadrante3= operaciones.trasladar(puntoInicial3, 
 				matrizSegundoCuadrante);
-		g.drawLine(convertirPuntoX((int) puntoSegundoCuadrante3[0]), convertirPuntoY((int) puntoSegundoCuadrante3[1]),
-				convertirPuntoX((int) puntoSegundoCuadrante3[2]), convertirPuntoY((int) puntoSegundoCuadrante3[3]));
+		g.drawLine(convertirPuntoX(puntoSegundoCuadrante3[0]), convertirPuntoY(puntoSegundoCuadrante3[1]),
+				convertirPuntoX(puntoSegundoCuadrante3[2]), convertirPuntoY(puntoSegundoCuadrante3[3]));
 		
 		double[] puntoSegundoCuadrante4= operaciones.trasladar(puntoInicial4, 
 				matrizSegundoCuadrante);
-		g.drawLine(convertirPuntoX((int) puntoSegundoCuadrante4[0]), convertirPuntoY((int) puntoSegundoCuadrante4[1]),
-				convertirPuntoX((int) puntoSegundoCuadrante4[2]), convertirPuntoY((int) puntoSegundoCuadrante4[3]));
+		g.drawLine(convertirPuntoX(puntoSegundoCuadrante4[0]), convertirPuntoY(puntoSegundoCuadrante4[1]),
+				convertirPuntoX(puntoSegundoCuadrante4[2]), convertirPuntoY(puntoSegundoCuadrante4[3]));
 		
 	
 		
 		double[] puntoTercerCuadrante1= operaciones.trasladar(puntoInicial1, 
 				matrizTercerCuadrante);
-		g.drawLine(convertirPuntoX((int) puntoTercerCuadrante1[0]), convertirPuntoY((int) puntoTercerCuadrante1[1]),
-				convertirPuntoX((int) puntoTercerCuadrante1[2]), convertirPuntoY((int) puntoTercerCuadrante1[3]));
+		g.drawLine(convertirPuntoX(puntoTercerCuadrante1[0]), convertirPuntoY(puntoTercerCuadrante1[1]),
+				convertirPuntoX(puntoTercerCuadrante1[2]), convertirPuntoY(puntoTercerCuadrante1[3]));
 		
 		double[] puntoTercerCuadrante2= operaciones.trasladar(puntoInicial2, 
 				matrizTercerCuadrante);
-		g.drawLine(convertirPuntoX((int) puntoTercerCuadrante2[0]), convertirPuntoY((int) puntoTercerCuadrante2[1]),
-				convertirPuntoX((int) puntoTercerCuadrante2[2]), convertirPuntoY((int) puntoTercerCuadrante2[3]));
+		g.drawLine(convertirPuntoX(puntoTercerCuadrante2[0]), convertirPuntoY(puntoTercerCuadrante2[1]),
+				convertirPuntoX(puntoTercerCuadrante2[2]), convertirPuntoY(puntoTercerCuadrante2[3]));
 		
 		double[] puntoTercerCuadrante3= operaciones.trasladar(puntoInicial3, 
 				matrizTercerCuadrante);
-		g.drawLine(convertirPuntoX((int) puntoTercerCuadrante3[0]), convertirPuntoY((int) puntoTercerCuadrante3[1]),
-				convertirPuntoX((int) puntoTercerCuadrante3[2]), convertirPuntoY((int) puntoTercerCuadrante3[3]));
+		g.drawLine(convertirPuntoX(puntoTercerCuadrante3[0]), convertirPuntoY(puntoTercerCuadrante3[1]),
+				convertirPuntoX(puntoTercerCuadrante3[2]), convertirPuntoY(puntoTercerCuadrante3[3]));
 		
 		double[] puntoTercerCuadrante4= operaciones.trasladar(puntoInicial4, 
 				matrizTercerCuadrante);
-		g.drawLine(convertirPuntoX((int) puntoTercerCuadrante4[0]), convertirPuntoY((int) puntoTercerCuadrante4[1]),
-				convertirPuntoX((int) puntoTercerCuadrante4[2]), convertirPuntoY((int) puntoTercerCuadrante4[3]));
+		g.drawLine(convertirPuntoX(puntoTercerCuadrante4[0]), convertirPuntoY(puntoTercerCuadrante4[1]),
+				convertirPuntoX(puntoTercerCuadrante4[2]), convertirPuntoY(puntoTercerCuadrante4[3]));
 				
 				
 		
@@ -90,34 +90,34 @@ public class Ventana extends JFrame {
 		
 		double[] puntoCuartoCuadrante1= operaciones.trasladar(puntoInicial1, 
 				matrizCuartoCuadrante);
-		g.drawLine(convertirPuntoX((int) puntoCuartoCuadrante1[0]), convertirPuntoY((int) puntoCuartoCuadrante1[1]),
-				convertirPuntoX((int) puntoCuartoCuadrante1[2]), convertirPuntoY((int) puntoCuartoCuadrante1[3]));
+		g.drawLine(convertirPuntoX(puntoCuartoCuadrante1[0]), convertirPuntoY(puntoCuartoCuadrante1[1]),
+				convertirPuntoX(puntoCuartoCuadrante1[2]), convertirPuntoY(puntoCuartoCuadrante1[3]));
 		
 		double[] puntoCuartoCuadrante2= operaciones.trasladar(puntoInicial2, 
 				matrizCuartoCuadrante);
-		g.drawLine(convertirPuntoX((int) puntoCuartoCuadrante2[0]), convertirPuntoY((int) puntoCuartoCuadrante2[1]),
-				convertirPuntoX((int) puntoCuartoCuadrante2[2]), convertirPuntoY((int) puntoCuartoCuadrante2[3]));
+		g.drawLine(convertirPuntoX(puntoCuartoCuadrante2[0]), convertirPuntoY(puntoCuartoCuadrante2[1]),
+				convertirPuntoX(puntoCuartoCuadrante2[2]), convertirPuntoY(puntoCuartoCuadrante2[3]));
 		
 		double[] puntoCuartoCuadrante3= operaciones.trasladar(puntoInicial3, 
 				matrizCuartoCuadrante);
-		g.drawLine(convertirPuntoX((int) puntoCuartoCuadrante3[0]), convertirPuntoY((int) puntoCuartoCuadrante3[1]),
-				convertirPuntoX((int) puntoCuartoCuadrante3[2]), convertirPuntoY((int) puntoCuartoCuadrante3[3]));
+		g.drawLine(convertirPuntoX(puntoCuartoCuadrante3[0]), convertirPuntoY(puntoCuartoCuadrante3[1]),
+				convertirPuntoX(puntoCuartoCuadrante3[2]), convertirPuntoY(puntoCuartoCuadrante3[3]));
 		
 		double[] puntoCuartoCuadrante4= operaciones.trasladar(puntoInicial4, 
 				matrizCuartoCuadrante);
-		g.drawLine(convertirPuntoX((int) puntoCuartoCuadrante4[0]), convertirPuntoY((int) puntoCuartoCuadrante4[1]),
-				convertirPuntoX((int) puntoCuartoCuadrante4[2]), convertirPuntoY((int) puntoCuartoCuadrante4[3]));
+		g.drawLine(convertirPuntoX(puntoCuartoCuadrante4[0]), convertirPuntoY(puntoCuartoCuadrante4[1]),
+				convertirPuntoX(puntoCuartoCuadrante4[2]), convertirPuntoY(puntoCuartoCuadrante4[3]));
 	}
 	
 	
-	private int convertirPuntoX(int x) {
-		int centro = this.getWidth() / 2;
-		return centro + x * ESCALA;
+	private int convertirPuntoX(double x) {
+		double centro = this.getWidth() / 2.0;
+		return (int) (centro + x * ESCALA);
 	}
 	
-	private int convertirPuntoY(int y) {
-		int centro = this.getHeight() / 2;
-		return centro - y * ESCALA;
+	private int convertirPuntoY(double y) {
+		double centro = this.getHeight() / 2.0;
+		return (int) (centro - y * ESCALA);
 	}
 
 }

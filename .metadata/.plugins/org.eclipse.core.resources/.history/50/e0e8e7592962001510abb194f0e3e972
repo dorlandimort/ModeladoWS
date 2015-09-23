@@ -100,17 +100,17 @@ public class Ventana extends JFrame {
 		
 		g.setColor(Color.MAGENTA);
 		
-		g.drawLine(convertirPuntoX(puntoEscaladoA[0]), convertirPuntoY(puntoEscaladoA[1]),
-				convertirPuntoX(puntoEscaladoB[0]), convertirPuntoY(puntoEscaladoB[1]));
+		g.drawLine(convertirPuntoX((int)puntoEscaladoA[0]), convertirPuntoY((int)puntoEscaladoA[1]),
+				convertirPuntoX((int)puntoEscaladoB[0]), convertirPuntoY((int)puntoEscaladoB[1]));
 		
-		g.drawLine(convertirPuntoX(puntoEscaladoB[0]), convertirPuntoY(puntoEscaladoB[1]),
-				convertirPuntoX(puntoEscaladoC[0]), convertirPuntoY(puntoEscaladoC[1]));
+		g.drawLine(convertirPuntoX((int)puntoEscaladoB[0]), convertirPuntoY((int)puntoEscaladoB[1]),
+				convertirPuntoX((int)puntoEscaladoC[0]), convertirPuntoY((int)puntoEscaladoC[1]));
 		
-		g.drawLine(convertirPuntoX(puntoEscaladoC[0]), convertirPuntoY(puntoEscaladoC[1]),
-				convertirPuntoX(puntoEscaladoD[0]), convertirPuntoY(puntoEscaladoD[1]));
+		g.drawLine(convertirPuntoX((int)puntoEscaladoC[0]), convertirPuntoY((int)puntoEscaladoC[1]),
+				convertirPuntoX((int)puntoEscaladoD[0]), convertirPuntoY((int)puntoEscaladoD[1]));
 		
-		g.drawLine(convertirPuntoX(puntoEscaladoD[0]), convertirPuntoY(puntoEscaladoD[1]),
-				convertirPuntoX(puntoEscaladoA[0]), convertirPuntoY(puntoEscaladoA[1]));
+		g.drawLine(convertirPuntoX((int)puntoEscaladoD[0]), convertirPuntoY((int)puntoEscaladoD[1]),
+				convertirPuntoX((int)puntoEscaladoA[0]), convertirPuntoY((int)puntoEscaladoA[1]));
 	
 	}
 	

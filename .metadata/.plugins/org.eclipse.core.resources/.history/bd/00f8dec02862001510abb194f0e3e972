@@ -63,7 +63,7 @@ public class Ventana extends JFrame {
 				(int) convertirPuntoX(puntoInicialA[0]), convertirPuntoY(puntoInicialA[1]));
 	
 	// Segunda figura
-		double k = 0.1;
+		double k = 0.5;
 		
 		double[] puntoEscaladoA = operaciones.escalar(puntoInicialA, 2, k);
 		double[] puntoEscaladoB = operaciones.escalar(puntoInicialB, 2, k);
@@ -100,7 +100,6 @@ public class Ventana extends JFrame {
 		g.drawLine( convertirPuntoX(puntoEscaladoH[0]), convertirPuntoY(puntoEscaladoH[1]),
 				 convertirPuntoX(puntoEscaladoA[0]), convertirPuntoY(puntoEscaladoA[1]));
 		
-	// Tercer figura
 		k = 1.2;
 		
 		puntoEscaladoA = operaciones.escalar(puntoInicialA, 2, k);
@@ -113,6 +112,18 @@ public class Ventana extends JFrame {
 		puntoEscaladoH = operaciones.escalar(puntoInicialH, 2, k);
 		
 		
+		/*
+		double grados = 90;
+		
+		puntoEscaladoA = operaciones.rotar(puntoInicialA, grados);
+		puntoEscaladoB = operaciones.rotar(puntoInicialB, grados);
+		puntoEscaladoC = operaciones.rotar(puntoInicialC, grados);
+		puntoEscaladoD = operaciones.rotar(puntoInicialD, grados);
+		puntoEscaladoE = operaciones.rotar(puntoInicialE, grados);
+		puntoEscaladoF = operaciones.rotar(puntoInicialF, grados);
+		puntoEscaladoG = operaciones.rotar(puntoInicialG, grados);
+		puntoEscaladoH = operaciones.rotar(puntoInicialH, grados);
+		*/
 		g.setColor(Color.GREEN);
 		
 		g.drawLine(convertirPuntoX(puntoEscaladoA[0]), convertirPuntoY(puntoEscaladoA[1]),

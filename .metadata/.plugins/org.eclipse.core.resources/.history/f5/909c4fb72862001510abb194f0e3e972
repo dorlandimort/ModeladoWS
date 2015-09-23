@@ -63,7 +63,7 @@ public class Ventana extends JFrame {
 				(int) convertirPuntoX(puntoInicialA[0]), convertirPuntoY(puntoInicialA[1]));
 	
 	// Segunda figura
-		double k = 0.1;
+		double k = 0.5;
 		
 		double[] puntoEscaladoA = operaciones.escalar(puntoInicialA, 2, k);
 		double[] puntoEscaladoB = operaciones.escalar(puntoInicialB, 2, k);
@@ -88,19 +88,18 @@ public class Ventana extends JFrame {
 		g.drawLine(convertirPuntoX(puntoEscaladoD[0]), convertirPuntoY(puntoEscaladoD[1]),
 				convertirPuntoX(puntoEscaladoE[0]), convertirPuntoY(puntoEscaladoE[1]));
 		
-		g.drawLine(convertirPuntoX(puntoEscaladoE[0]),  convertirPuntoY(puntoEscaladoE[1]),
-				convertirPuntoX(puntoEscaladoF[0]), convertirPuntoY(puntoEscaladoF[1]));
+		g.drawLine((int) convertirPuntoX(puntoEscaladoE[0]), (int) convertirPuntoY(puntoEscaladoE[1]),
+				(int) convertirPuntoX(puntoEscaladoF[0]), (int) convertirPuntoY(puntoEscaladoF[1]));
 		
-		g.drawLine(convertirPuntoX(puntoEscaladoF[0]), convertirPuntoY(puntoEscaladoF[1]),
-				convertirPuntoX(puntoEscaladoG[0]),  convertirPuntoY(puntoEscaladoG[1]));
+		g.drawLine((int) convertirPuntoX(puntoEscaladoF[0]), (int) convertirPuntoY(puntoEscaladoF[1]),
+				(int) convertirPuntoX(puntoEscaladoG[0]), (int) convertirPuntoY(puntoEscaladoG[1]));
 		
-		g.drawLine( convertirPuntoX(puntoEscaladoG[0]),convertirPuntoY(puntoEscaladoG[1]),
-				convertirPuntoX(puntoEscaladoH[0]), convertirPuntoY(puntoEscaladoH[1]));
+		g.drawLine((int) convertirPuntoX(puntoEscaladoG[0]), (int) convertirPuntoY(puntoEscaladoG[1]),
+				(int) convertirPuntoX(puntoEscaladoH[0]), (int) convertirPuntoY(puntoEscaladoH[1]));
 		
-		g.drawLine( convertirPuntoX(puntoEscaladoH[0]), convertirPuntoY(puntoEscaladoH[1]),
-				 convertirPuntoX(puntoEscaladoA[0]), convertirPuntoY(puntoEscaladoA[1]));
+		g.drawLine((int) convertirPuntoX(puntoEscaladoH[0]), (int) convertirPuntoY(puntoEscaladoH[1]),
+				(int) convertirPuntoX(puntoEscaladoA[0]), (int) convertirPuntoY(puntoEscaladoA[1]));
 		
-	// Tercer figura
 		k = 1.2;
 		
 		puntoEscaladoA = operaciones.escalar(puntoInicialA, 2, k);
@@ -113,31 +112,43 @@ public class Ventana extends JFrame {
 		puntoEscaladoH = operaciones.escalar(puntoInicialH, 2, k);
 		
 		
+		/*
+		double grados = 90;
+		
+		puntoEscaladoA = operaciones.rotar(puntoInicialA, grados);
+		puntoEscaladoB = operaciones.rotar(puntoInicialB, grados);
+		puntoEscaladoC = operaciones.rotar(puntoInicialC, grados);
+		puntoEscaladoD = operaciones.rotar(puntoInicialD, grados);
+		puntoEscaladoE = operaciones.rotar(puntoInicialE, grados);
+		puntoEscaladoF = operaciones.rotar(puntoInicialF, grados);
+		puntoEscaladoG = operaciones.rotar(puntoInicialG, grados);
+		puntoEscaladoH = operaciones.rotar(puntoInicialH, grados);
+		*/
 		g.setColor(Color.GREEN);
 		
-		g.drawLine(convertirPuntoX(puntoEscaladoA[0]), convertirPuntoY(puntoEscaladoA[1]),
-				 convertirPuntoX(puntoEscaladoB[0]), convertirPuntoY(puntoEscaladoB[1]));
+		g.drawLine((int) convertirPuntoX(puntoEscaladoA[0]), (int) convertirPuntoY(puntoEscaladoA[1]),
+				(int) convertirPuntoX(puntoEscaladoB[0]), (int) convertirPuntoY(puntoEscaladoB[1]));
 		
-		g.drawLine(convertirPuntoX(puntoEscaladoB[0]), convertirPuntoY(puntoEscaladoB[1]),
-				convertirPuntoX(puntoEscaladoC[0]), convertirPuntoY(puntoEscaladoC[1]));
+		g.drawLine((int) convertirPuntoX(puntoEscaladoB[0]), (int) convertirPuntoY(puntoEscaladoB[1]),
+				(int) convertirPuntoX(puntoEscaladoC[0]), (int) convertirPuntoY(puntoEscaladoC[1]));
 		
-		g.drawLine(convertirPuntoX(puntoEscaladoC[0]), convertirPuntoY(puntoEscaladoC[1]),
-				convertirPuntoX(puntoEscaladoD[0]), convertirPuntoY(puntoEscaladoD[1]));
+		g.drawLine((int) convertirPuntoX(puntoEscaladoC[0]), (int) convertirPuntoY(puntoEscaladoC[1]),
+				(int) convertirPuntoX(puntoEscaladoD[0]), (int) convertirPuntoY(puntoEscaladoD[1]));
 		
-		g.drawLine(convertirPuntoX(puntoEscaladoD[0]), convertirPuntoY(puntoEscaladoD[1]),
-				convertirPuntoX(puntoEscaladoE[0]), convertirPuntoY(puntoEscaladoE[1]));
+		g.drawLine((int) convertirPuntoX(puntoEscaladoD[0]), (int) convertirPuntoY(puntoEscaladoD[1]),
+				(int) convertirPuntoX(puntoEscaladoE[0]), (int) convertirPuntoY(puntoEscaladoE[1]));
 		
-		g.drawLine(convertirPuntoX(puntoEscaladoE[0]),  convertirPuntoY(puntoEscaladoE[1]),
-				convertirPuntoX(puntoEscaladoF[0]), convertirPuntoY(puntoEscaladoF[1]));
+		g.drawLine((int) convertirPuntoX(puntoEscaladoE[0]), (int) convertirPuntoY(puntoEscaladoE[1]),
+				(int) convertirPuntoX(puntoEscaladoF[0]), (int) convertirPuntoY(puntoEscaladoF[1]));
 		
-		g.drawLine(convertirPuntoX(puntoEscaladoF[0]), convertirPuntoY(puntoEscaladoF[1]),
-				convertirPuntoX(puntoEscaladoG[0]),  convertirPuntoY(puntoEscaladoG[1]));
+		g.drawLine((int) convertirPuntoX(puntoEscaladoF[0]), (int) convertirPuntoY(puntoEscaladoF[1]),
+				(int) convertirPuntoX(puntoEscaladoG[0]), (int) convertirPuntoY(puntoEscaladoG[1]));
 		
-		g.drawLine( convertirPuntoX(puntoEscaladoG[0]),convertirPuntoY(puntoEscaladoG[1]),
-				convertirPuntoX(puntoEscaladoH[0]), convertirPuntoY(puntoEscaladoH[1]));
-		
-		g.drawLine( convertirPuntoX(puntoEscaladoH[0]), convertirPuntoY(puntoEscaladoH[1]),
-				 convertirPuntoX(puntoEscaladoA[0]), convertirPuntoY(puntoEscaladoA[1]));
+		g.drawLine((int) convertirPuntoX(puntoEscaladoG[0]), (int) convertirPuntoY(puntoEscaladoG[1]),
+				(int) convertirPuntoX(puntoEscaladoH[0]), (int) convertirPuntoY(puntoEscaladoH[1]));
+
+		g.drawLine((int) convertirPuntoX(puntoEscaladoH[0]), (int) convertirPuntoY(puntoEscaladoH[1]),
+				(int) convertirPuntoX(puntoEscaladoA[0]), (int) convertirPuntoY(puntoEscaladoA[1]));
 	
 	}
 	
