@@ -27,8 +27,8 @@ public class Ventana extends JFrame {
 		// Declarar puntos iniciales
 		double[] puntoInicialA = { 0, 0 };
 		double[] puntoInicialB = { 0, 10 };
-		double[] puntoInicialC = { -0.3, 9 };
-		double[] puntoInicialD = { 0.3, 9 };
+		double[] puntoInicialC = { -0.1, 8 };
+		double[] puntoInicialD = { 0.1, 8 };
 		double[] puntoEscaladoB = null;
 		double[] puntoEscaladoC = null;
 		double[] puntoEscaladoD = null;
@@ -42,7 +42,6 @@ public class Ventana extends JFrame {
 				puntoEscaladoB = operaciones.rotar(puntoInicialB, i, 2);
 				puntoEscaladoC = operaciones.rotar(puntoInicialC, i, 2);
 				puntoEscaladoD = operaciones.rotar(puntoInicialD, i, 2);
-				
 				g.drawLine(convertirPuntoX(puntoInicialA[0]), convertirPuntoY(puntoInicialA[1]),
 						convertirPuntoX(puntoEscaladoB[0]), convertirPuntoY(puntoEscaladoB[1]));
 				

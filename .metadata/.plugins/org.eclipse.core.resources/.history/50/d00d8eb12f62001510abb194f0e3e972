@@ -27,30 +27,17 @@ public class Ventana extends JFrame {
 		// Declarar puntos iniciales
 		double[] puntoInicialA = { 0, 0 };
 		double[] puntoInicialB = { 0, 10 };
-		double[] puntoInicialC = { -0.3, 9 };
-		double[] puntoInicialD = { 0.3, 9 };
 		double[] puntoEscaladoB = null;
-		double[] puntoEscaladoC = null;
-		double[] puntoEscaladoD = null;
 
 		// Dibujar el poligono
 
 		g.setColor(Color.RED);
 
 		try {
-			for (int i = 360; i >= 0; i -= 6) {
+			for (int i = 360; i >= 0; i -= 1) {
 				puntoEscaladoB = operaciones.rotar(puntoInicialB, i, 2);
-				puntoEscaladoC = operaciones.rotar(puntoInicialC, i, 2);
-				puntoEscaladoD = operaciones.rotar(puntoInicialD, i, 2);
-				
 				g.drawLine(convertirPuntoX(puntoInicialA[0]), convertirPuntoY(puntoInicialA[1]),
 						convertirPuntoX(puntoEscaladoB[0]), convertirPuntoY(puntoEscaladoB[1]));
-				
-				g.drawLine(convertirPuntoX(puntoEscaladoB[0]), convertirPuntoY(puntoEscaladoB[1]),
-						convertirPuntoX(puntoEscaladoC[0]), convertirPuntoY(puntoEscaladoC[1]));
-				
-				g.drawLine(convertirPuntoX(puntoEscaladoB[0]), convertirPuntoY(puntoEscaladoB[1]),
-						convertirPuntoX(puntoEscaladoD[0]), convertirPuntoY(puntoEscaladoD[1]));
 				Thread.sleep(100);
 			}
 

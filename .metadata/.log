@@ -111,3 +111,73 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.debug.core 4 2 2015-09-23 15:15:09.316
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4465)
+	at org.eclipse.swt.SWT.error(SWT.java:4380)
+	at org.eclipse.swt.SWT.error(SWT.java:4351)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:476)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:590)
+	at org.eclipse.jface.action.ActionContributionItem.actionPropertyChange(ActionContributionItem.java:176)
+	at org.eclipse.jface.action.ActionContributionItem.access$0(ActionContributionItem.java:172)
+	at org.eclipse.jface.action.ActionContributionItem$2.propertyChange(ActionContributionItem.java:139)
+	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:49)
+	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:72)
+	at org.eclipse.jface.action.Action.setEnabled(Action.java:540)
+	at org.eclipse.debug.internal.ui.views.console.ConsoleRemoveAllTerminatedAction.update(ConsoleRemoveAllTerminatedAction.java:47)
+	at org.eclipse.debug.internal.ui.views.console.ConsoleRemoveAllTerminatedAction.launchesRemoved(ConsoleRemoveAllTerminatedAction.java:77)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:287)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:270)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1055)
+	at org.eclipse.debug.internal.core.LaunchManager.removeLaunch(LaunchManager.java:2240)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.removeTerminatedLaunches(LaunchConfigurationManager.java:330)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.launchAdded(LaunchConfigurationManager.java:316)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.run(LaunchManager.java:451)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.notify(LaunchManager.java:438)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1044)
+	at org.eclipse.debug.internal.core.LaunchManager.addLaunch(LaunchManager.java:708)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:834)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.core 4 120 2015-09-23 15:15:09.331
+!MESSAGE An exception occurred during launch change notification.
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4465)
+	at org.eclipse.swt.SWT.error(SWT.java:4380)
+	at org.eclipse.swt.SWT.error(SWT.java:4351)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:476)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:590)
+	at org.eclipse.jface.action.ActionContributionItem.actionPropertyChange(ActionContributionItem.java:176)
+	at org.eclipse.jface.action.ActionContributionItem.access$0(ActionContributionItem.java:172)
+	at org.eclipse.jface.action.ActionContributionItem$2.propertyChange(ActionContributionItem.java:139)
+	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:49)
+	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:72)
+	at org.eclipse.jface.action.Action.setEnabled(Action.java:540)
+	at org.eclipse.debug.internal.ui.views.console.ConsoleRemoveAllTerminatedAction.update(ConsoleRemoveAllTerminatedAction.java:47)
+	at org.eclipse.debug.internal.ui.views.console.ConsoleRemoveAllTerminatedAction.launchesRemoved(ConsoleRemoveAllTerminatedAction.java:77)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:287)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:270)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1055)
+	at org.eclipse.debug.internal.core.LaunchManager.removeLaunch(LaunchManager.java:2240)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.removeTerminatedLaunches(LaunchConfigurationManager.java:330)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.launchAdded(LaunchConfigurationManager.java:316)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.run(LaunchManager.java:451)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.notify(LaunchManager.java:438)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1044)
+	at org.eclipse.debug.internal.core.LaunchManager.addLaunch(LaunchManager.java:708)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:834)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
