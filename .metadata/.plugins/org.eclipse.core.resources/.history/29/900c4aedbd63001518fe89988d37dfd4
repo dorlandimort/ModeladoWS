@@ -64,7 +64,7 @@ public class Ventana extends JFrame {
 				convertirPuntoX(puntoInicialA[0]), convertirPuntoY(puntoInicialA[1]));
 		
 		g.setColor(Color.BLUE);
-		for (double i = 0; i < 30; i = i + 0.5) {
+		for (int i = 0; i < 30; i++) {
 			try {
 				primerCuadrante[0] = i;
 				puntoEscaladoA = operaciones.trasladar(puntoInicialA, primerCuadrante);
@@ -96,7 +96,7 @@ public class Ventana extends JFrame {
 		
 		g.setColor(Color.GREEN);
 		
-		for (double i = 0; i < 20; i = i + 0.5) {
+		for (int i = 0; i < 20; i++) {
 			try {
 				segundoCuadrante[1] = -i;
 				puntoEscaladoA = operaciones.trasladar(puntoInicialA, segundoCuadrante);
