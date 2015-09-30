@@ -244,11 +244,11 @@ public class Ventana extends JFrame {
 			for (double i = 0; i < 25; i = i + 0.5) {
 				try {
 					super.paint(g);
-					if(i >= 20)
+					if(i >= 12.5)
 						k -= 0.05;
 					else 
-						k += 0.05;
-					angulo -= 9;
+						k += 0.1;
+					angulo -= 14.4;
 					primerCuadrante[0] = - centro[0];
 					primerCuadrante[1] = - centro[1];
 					
@@ -492,11 +492,11 @@ public class Ventana extends JFrame {
 			for (double i = 0; i < 25; i = i + 0.5) {
 				try {
 					super.paint(g);
-					if(i >= 20)
+					if(i >= 12.5)
 						k -= 0.05;
 					else 
-						k += 0.05;
-					angulo -= 9;
+						k += 0.1;
+					angulo -= 14.4;
 					primerCuadrante[0] = - centro[0];
 					primerCuadrante[1] = - centro[1];
 					
