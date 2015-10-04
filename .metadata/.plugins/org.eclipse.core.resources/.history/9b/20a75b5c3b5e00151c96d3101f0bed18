@@ -1,8 +1,0 @@
-
-public interface Matriz {
-	
-	public double[] trasladar(double[] puntoInicial, double[] vectorTraslacion);
-	
-	public double[] escalar(int[] puntoInicial, int dimension, double k);
-
-}

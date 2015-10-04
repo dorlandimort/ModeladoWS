@@ -1,6 +1,0 @@
-
-public interface Matriz {
-	
-	public int[] escalar(int[] puntoInicial, double[] vectorTraslacion);
-
-}
