@@ -16,14 +16,51 @@ public class Ventana extends JFrame {
 		MatrizImpl operaciones = new MatrizImpl();
 
 		// Dibujar plano cartesiano
-		
+		/*
 		 g.drawLine(convertirPuntoX(-100), convertirPuntoY(0),
 		 convertirPuntoX(100), convertirPuntoY(0));
 		 g.drawLine(convertirPuntoX(0), convertirPuntoY(100),
 		 convertirPuntoX(0), convertirPuntoY(-100));
-		 
+		 */
 
+		// Declarar puntos iniciales
 	
+		/*
+		double[] puntoInicialA = {2, -2, 0};
+		double[] puntoInicialB = {2, 2, 0};
+		double[] puntoInicialC = {-2, -2, 0};
+		double[] puntoInicialD = {-2, 2, 0};
+		double[] puntoInicialE = {0, 0, 4};
+
+		
+		double[] puntoTransformadoA = operaciones.transformar(puntoInicialA);
+		double[] puntoTransformadoB = operaciones.transformar(puntoInicialB);
+		double[] puntoTransformadoC = operaciones.transformar(puntoInicialC);
+		double[] puntoTransformadoD = operaciones.transformar(puntoInicialD);
+		double[] puntoTransformadoE = operaciones.transformar(puntoInicialE);
+		
+		g.setColor(Color.RED);
+		g.drawLine(convertirPuntoX(puntoTransformadoA[0]), convertirPuntoY(puntoTransformadoA[1]),
+				convertirPuntoX(puntoTransformadoB[0]), convertirPuntoY(puntoTransformadoB[1]));
+		
+		g.drawLine(convertirPuntoX(puntoTransformadoB[0]), convertirPuntoY(puntoTransformadoB[1]),
+				convertirPuntoX(puntoTransformadoD[0]), convertirPuntoY(puntoTransformadoD[1]));
+		
+		g.drawLine(convertirPuntoX(puntoTransformadoD[0]), convertirPuntoY(puntoTransformadoD[1]),
+				convertirPuntoX(puntoTransformadoC[0]), convertirPuntoY(puntoTransformadoC[1]));
+		
+		g.drawLine(convertirPuntoX(puntoTransformadoC[0]), convertirPuntoY(puntoTransformadoC[1]),
+				convertirPuntoX(puntoTransformadoA[0]), convertirPuntoY(puntoTransformadoA[1]));
+		g.setColor(Color.BLUE);
+		g.drawLine(convertirPuntoX(puntoTransformadoA[0]), convertirPuntoY(puntoTransformadoA[1]),
+				convertirPuntoX(puntoTransformadoE[0]), convertirPuntoY(puntoTransformadoE[1]));
+		g.drawLine(convertirPuntoX(puntoTransformadoB[0]), convertirPuntoY(puntoTransformadoB[1]),
+				convertirPuntoX(puntoTransformadoE[0]), convertirPuntoY(puntoTransformadoE[1]));
+		g.drawLine(convertirPuntoX(puntoTransformadoC[0]), convertirPuntoY(puntoTransformadoC[1]),
+				convertirPuntoX(puntoTransformadoE[0]), convertirPuntoY(puntoTransformadoE[1]));
+		g.drawLine(convertirPuntoX(puntoTransformadoD[0]), convertirPuntoY(puntoTransformadoD[1]),
+				convertirPuntoX(puntoTransformadoE[0]), convertirPuntoY(puntoTransformadoE[1]));
+				*/
 		double[] puntoInicialA = {0, 0, 0};
 		double[] puntoInicialB = {0, 3, 0};
 		double[] puntoInicialC = {3, 3, 0};
