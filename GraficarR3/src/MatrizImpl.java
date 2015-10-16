@@ -38,8 +38,8 @@ public class MatrizImpl implements Matriz {
 	@Override
 	public double[] transformar(double[] puntoInicial) {
 		double[] resultado = {
-				- puntoInicial[0] + puntoInicial[1],
-				- puntoInicial[0] + puntoInicial[2]
+				 - puntoInicial[0] + (puntoInicial[1]),
+				 - puntoInicial[0] +  puntoInicial[2]
 		};
 		return resultado;
 	}

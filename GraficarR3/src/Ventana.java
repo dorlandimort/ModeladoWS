@@ -16,12 +16,12 @@ public class Ventana extends JFrame {
 		MatrizImpl operaciones = new MatrizImpl();
 
 		// Dibujar plano cartesiano
-		
+		/*
 		 g.drawLine(convertirPuntoX(-100), convertirPuntoY(0),
 		 convertirPuntoX(100), convertirPuntoY(0));
 		 g.drawLine(convertirPuntoX(0), convertirPuntoY(100),
 		 convertirPuntoX(0), convertirPuntoY(-100));
-		 
+		 */
 
 		// Declarar puntos iniciales
 	
@@ -61,15 +61,15 @@ public class Ventana extends JFrame {
 		g.drawLine(convertirPuntoX(puntoTransformadoD[0]), convertirPuntoY(puntoTransformadoD[1]),
 				convertirPuntoX(puntoTransformadoE[0]), convertirPuntoY(puntoTransformadoE[1]));
 				*/
-		double[] puntoInicialA = {3, 0, 0};
-		double[] puntoInicialB = {3, 3, 0};
-		double[] puntoInicialC = {0, 3, 0};
-		double[] puntoInicialD = {0, 0, 0};
+		double[] puntoInicialA = {0, 0, 0};
+		double[] puntoInicialB = {0, 3, 0};
+		double[] puntoInicialC = {3, 3, 0};
+		double[] puntoInicialD = {3, 0, 0};
 		
-		double[] puntoInicialE = {3, 3, 1};
-		double[] puntoInicialF = {3, 0, 1};
-		double[] puntoInicialG = {3, 0, 0};
-		double[] puntoInicialH = {0, 3, 3};
+		double[] puntoInicialE = {3, 0, 3};
+		double[] puntoInicialF = {0, 0, 3};
+		double[] puntoInicialG = {0, 3, 3};
+		double[] puntoInicialH = {3, 3, 3};
 		
 		double[] puntoTransformadoA = operaciones.transformar(puntoInicialA);
 		double[] puntoTransformadoB = operaciones.transformar(puntoInicialB);
@@ -92,22 +92,34 @@ public class Ventana extends JFrame {
 		
 		g.drawLine(convertirPuntoX(puntoTransformadoD[0]), convertirPuntoY(puntoTransformadoD[1]),
 				convertirPuntoX(puntoTransformadoA[0]), convertirPuntoY(puntoTransformadoA[1]));
+		/////////////
 		
-		g.drawLine(convertirPuntoX(puntoTransformadoB[0]), convertirPuntoY(puntoTransformadoB[1]),
-				convertirPuntoX(puntoTransformadoE[0]), convertirPuntoY(puntoTransformadoE[1]));
-		
-		g.drawLine(convertirPuntoX(puntoTransformadoA[0]), convertirPuntoY(puntoTransformadoA[1]),
-				convertirPuntoX(puntoTransformadoF[0]), convertirPuntoY(puntoTransformadoF[1]));
-		
-		g.drawLine(convertirPuntoX(puntoTransformadoA[0]), convertirPuntoY(puntoTransformadoA[1]),
+		g.drawLine(convertirPuntoX(puntoTransformadoE[0]), convertirPuntoY(puntoTransformadoE[1]),
 				convertirPuntoX(puntoTransformadoF[0]), convertirPuntoY(puntoTransformadoF[1]));
 		
 		g.drawLine(convertirPuntoX(puntoTransformadoF[0]), convertirPuntoY(puntoTransformadoF[1]),
 				convertirPuntoX(puntoTransformadoG[0]), convertirPuntoY(puntoTransformadoG[1]));
+		
 		g.drawLine(convertirPuntoX(puntoTransformadoG[0]), convertirPuntoY(puntoTransformadoG[1]),
 				convertirPuntoX(puntoTransformadoH[0]), convertirPuntoY(puntoTransformadoH[1]));
+		
 		g.drawLine(convertirPuntoX(puntoTransformadoH[0]), convertirPuntoY(puntoTransformadoH[1]),
-				convertirPuntoX(puntoTransformadoC[0]), convertirPuntoY(puntoTransformadoC[1]));
+				convertirPuntoX(puntoTransformadoA[0]), convertirPuntoY(puntoTransformadoA[1]));
+		
+		g.drawLine(convertirPuntoX(puntoTransformadoA[0]), convertirPuntoY(puntoTransformadoA[1]),
+				convertirPuntoX(puntoTransformadoF[0]), convertirPuntoY(puntoTransformadoF[1]));
+		
+		g.drawLine(convertirPuntoX(puntoTransformadoB[0]), convertirPuntoY(puntoTransformadoB[1]),
+				convertirPuntoX(puntoTransformadoG[0]), convertirPuntoY(puntoTransformadoG[1]));
+		
+		g.drawLine(convertirPuntoX(puntoTransformadoC[0]), convertirPuntoY(puntoTransformadoC[1]),
+				convertirPuntoX(puntoTransformadoH[0]), convertirPuntoY(puntoTransformadoH[1]));
+		
+		g.drawLine(convertirPuntoX(puntoTransformadoD[0]), convertirPuntoY(puntoTransformadoD[1]),
+				convertirPuntoX(puntoTransformadoE[0]), convertirPuntoY(puntoTransformadoE[1]));
+		
+		g.drawLine(convertirPuntoX(puntoTransformadoH[0]), convertirPuntoY(puntoTransformadoH[1]),
+				convertirPuntoX(puntoTransformadoE[0]), convertirPuntoY(puntoTransformadoE[1]));
 		
 		
 	}
