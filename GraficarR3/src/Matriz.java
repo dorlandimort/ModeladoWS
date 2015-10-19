@@ -7,6 +7,10 @@ public interface Matriz {
 	
 	public double[] rotar(double[] puntoInicial, double angulo, int dimension);
 	
-	public double[] transformar(double[] puntoInicial);
+	public double[] transformarR3(double[] puntoInicial, double angulo);
+	public double[] transformarR3(double[] puntoInicial);
+	public double[] transformarR3(double x, double y, double z, double angulo);
+	
+	
 
 }

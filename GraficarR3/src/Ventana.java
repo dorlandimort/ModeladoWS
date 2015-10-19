@@ -1,5 +1,7 @@
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 
 import javax.swing.JFrame;
 
@@ -34,55 +36,62 @@ public class Ventana extends JFrame {
 		double[] puntoInicialG = {0, 3, 3};
 		double[] puntoInicialH = {3, 3, 3};
 		
-		double[] puntoTransformadoA = operaciones.transformar(puntoInicialA);
-		double[] puntoTransformadoB = operaciones.transformar(puntoInicialB);
-		double[] puntoTransformadoC = operaciones.transformar(puntoInicialC);
-		double[] puntoTransformadoD = operaciones.transformar(puntoInicialD);
-		double[] puntoTransformadoE = operaciones.transformar(puntoInicialE);
-		double[] puntoTransformadoF = operaciones.transformar(puntoInicialF);
-		double[] puntoTransformadoG = operaciones.transformar(puntoInicialG);
-		double[] puntoTransformadoH = operaciones.transformar(puntoInicialH);
+		
+		double[] puntoTransformadoA = operaciones.transformarR3(puntoInicialA);
+		double[] puntoTransformadoB = operaciones.transformarR3(puntoInicialB);
+		double[] puntoTransformadoC = operaciones.transformarR3(puntoInicialC);
+		double[] puntoTransformadoD = operaciones.transformarR3(puntoInicialD);
+		double[] puntoTransformadoE = operaciones.transformarR3(puntoInicialE);
+		double[] puntoTransformadoF = operaciones.transformarR3(puntoInicialF);
+		double[] puntoTransformadoG = operaciones.transformarR3(puntoInicialG);
+		double[] puntoTransformadoH = operaciones.transformarR3(puntoInicialH);
 		
 		g.setColor(Color.RED);
-		g.drawLine(convertirPuntoX(puntoTransformadoA[0]), convertirPuntoY(puntoTransformadoA[1]),
+		
+		Graphics2D g2 = (Graphics2D) g;
+		g2.setRenderingHint(
+                RenderingHints.KEY_ANTIALIASING, 
+                RenderingHints.VALUE_ANTIALIAS_ON); 
+		g2.drawLine(convertirPuntoX(puntoTransformadoA[0]), convertirPuntoY(puntoTransformadoA[1]), // a -> b
 				convertirPuntoX(puntoTransformadoB[0]), convertirPuntoY(puntoTransformadoB[1]));
 		
-		g.drawLine(convertirPuntoX(puntoTransformadoB[0]), convertirPuntoY(puntoTransformadoB[1]),
+		g2.drawLine(convertirPuntoX(puntoTransformadoB[0]), convertirPuntoY(puntoTransformadoB[1]), // b -> c
 				convertirPuntoX(puntoTransformadoC[0]), convertirPuntoY(puntoTransformadoC[1]));
 		
-		g.drawLine(convertirPuntoX(puntoTransformadoC[0]), convertirPuntoY(puntoTransformadoC[1]),
+		g2.drawLine(convertirPuntoX(puntoTransformadoC[0]), convertirPuntoY(puntoTransformadoC[1]), // c -> d
 				convertirPuntoX(puntoTransformadoD[0]), convertirPuntoY(puntoTransformadoD[1]));
 		
-		g.drawLine(convertirPuntoX(puntoTransformadoD[0]), convertirPuntoY(puntoTransformadoD[1]),
+		g2.drawLine(convertirPuntoX(puntoTransformadoD[0]), convertirPuntoY(puntoTransformadoD[1]), // d -> a
 				convertirPuntoX(puntoTransformadoA[0]), convertirPuntoY(puntoTransformadoA[1]));
 		/////////////
 		
-		g.drawLine(convertirPuntoX(puntoTransformadoE[0]), convertirPuntoY(puntoTransformadoE[1]),
+		g2.drawLine(convertirPuntoX(puntoTransformadoE[0]), convertirPuntoY(puntoTransformadoE[1]), // e -> f
 				convertirPuntoX(puntoTransformadoF[0]), convertirPuntoY(puntoTransformadoF[1]));
 		
-		g.drawLine(convertirPuntoX(puntoTransformadoF[0]), convertirPuntoY(puntoTransformadoF[1]),
+		g2.drawLine(convertirPuntoX(puntoTransformadoF[0]), convertirPuntoY(puntoTransformadoF[1]), // f -> g
 				convertirPuntoX(puntoTransformadoG[0]), convertirPuntoY(puntoTransformadoG[1]));
 		
-		g.drawLine(convertirPuntoX(puntoTransformadoG[0]), convertirPuntoY(puntoTransformadoG[1]),
+		g2.drawLine(convertirPuntoX(puntoTransformadoG[0]), convertirPuntoY(puntoTransformadoG[1]), // g -> h
 				convertirPuntoX(puntoTransformadoH[0]), convertirPuntoY(puntoTransformadoH[1]));
 		
-		g.drawLine(convertirPuntoX(puntoTransformadoH[0]), convertirPuntoY(puntoTransformadoH[1]),
-				convertirPuntoX(puntoTransformadoA[0]), convertirPuntoY(puntoTransformadoA[1]));
+		g2.drawLine(convertirPuntoX(puntoTransformadoH[0]), convertirPuntoY(puntoTransformadoH[1]), // h -> e
+				convertirPuntoX(puntoTransformadoE[0]), convertirPuntoY(puntoTransformadoE[1]));
 		
-		g.drawLine(convertirPuntoX(puntoTransformadoA[0]), convertirPuntoY(puntoTransformadoA[1]),
+		
+		
+		g2.drawLine(convertirPuntoX(puntoTransformadoA[0]), convertirPuntoY(puntoTransformadoA[1]), // a -> f 
 				convertirPuntoX(puntoTransformadoF[0]), convertirPuntoY(puntoTransformadoF[1]));
 		
-		g.drawLine(convertirPuntoX(puntoTransformadoB[0]), convertirPuntoY(puntoTransformadoB[1]),
+		g2.drawLine(convertirPuntoX(puntoTransformadoB[0]), convertirPuntoY(puntoTransformadoB[1]), // b -> g
 				convertirPuntoX(puntoTransformadoG[0]), convertirPuntoY(puntoTransformadoG[1]));
 		
-		g.drawLine(convertirPuntoX(puntoTransformadoC[0]), convertirPuntoY(puntoTransformadoC[1]),
+		g2.drawLine(convertirPuntoX(puntoTransformadoC[0]), convertirPuntoY(puntoTransformadoC[1]), // c -> h
 				convertirPuntoX(puntoTransformadoH[0]), convertirPuntoY(puntoTransformadoH[1]));
 		
-		g.drawLine(convertirPuntoX(puntoTransformadoD[0]), convertirPuntoY(puntoTransformadoD[1]),
+		g2.drawLine(convertirPuntoX(puntoTransformadoD[0]), convertirPuntoY(puntoTransformadoD[1]), // d -> e
 				convertirPuntoX(puntoTransformadoE[0]), convertirPuntoY(puntoTransformadoE[1]));
 		
-		g.drawLine(convertirPuntoX(puntoTransformadoH[0]), convertirPuntoY(puntoTransformadoH[1]),
-				convertirPuntoX(puntoTransformadoE[0]), convertirPuntoY(puntoTransformadoE[1]));
+		
 		
 		
 	}

@@ -34,7 +34,7 @@ public class MatrizImpl implements Matriz {
 	public static double toRadians(double grados) {
 		return (grados * Math.PI) / 180;
 	}
-
+/*
 	@Override
 	public double[] transformar(double[] puntoInicial) {
 		double[] resultado = {
@@ -43,7 +43,27 @@ public class MatrizImpl implements Matriz {
 		};
 		return resultado;
 	}
-	
+	*/
+
+	@Override
+	public double[] transformarR3(double[] puntoInicial, double angulo) {
+		double[] resultado = {
+				puntoInicial[1] - (puntoInicial[0] * Math.sin(Math.toRadians(angulo))), 
+				puntoInicial[2] + (puntoInicial[0] * Math.cos(Math.toRadians(angulo)))
+		};
+		return resultado;
+	}
+
+	@Override
+	public double[] transformarR3(double x, double y, double z, double angulo) {
+		double[] punto = {x, y, z};
+		return transformarR3(punto, angulo);
+	}
+
+	@Override
+	public double[] transformarR3(double[] puntoInicial) {
+		return transformarR3(puntoInicial, 135);
+	}
 	
 	
 }
