@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 
 public class Ventana extends JFrame {
 
-	public static int ESCALA = 20;
+	public static int ESCALA = 30;
 	public static double[] matrizSegundoCuadrante = { -8, 0, -8, 0 };
 	public static double[] matrizTercerCuadrante = { -8, -10, -8, -10 };
 	public static double[] matrizCuartoCuadrante = { 0, -10, 0, -10 };
