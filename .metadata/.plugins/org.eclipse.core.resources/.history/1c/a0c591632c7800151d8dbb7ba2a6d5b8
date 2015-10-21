@@ -75,7 +75,6 @@ public class MatrizImpl implements Matriz {
 					puntoInicial[1] + vectorTraslacion[1],
 					puntoInicial[2] + vectorTraslacion[2]
 			};
-			return resultado;
 		}
 		return null;
 	}
