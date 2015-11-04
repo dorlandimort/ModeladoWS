@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;Dia05PrjTP/src&apos;&#x0D;&#x0A;- Original project: &apos;Dia04PrjTP&apos;&#x0D;&#x0A;- Destination element: &apos;Dia05PrjTP/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Test.java&#x0D;&#x0A;     MatrizImpl.java&#x0D;&#x0A;     Matriz.java&#x0D;&#x0A;     Ventana.java" description="Copy compilation units" destination="=Dia05PrjTP/src" element1="/src&lt;{Test.java" element2="/src&lt;{MatrizImpl.java" element3="/src&lt;{Matriz.java" element4="/src&lt;{Ventana.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1446668569382" units="4" version="1.0"/>
+</session>

@@ -1,0 +1,74 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+
+import javax.swing.JFrame;
+
+public class Ventana extends JFrame {
+
+	public static int ESCALA = 15;
+	public static double[] matrizSegundoCuadrante = { -8, 0, -8, 0 };
+	public static double[] matrizTercerCuadrante = { -8, -10, -8, -10 };
+	public static double[] matrizCuartoCuadrante = { 0, -10, 0, -10 };
+
+	@Override
+	public void paint(Graphics g) {
+
+		MatrizImpl operaciones = new MatrizImpl();
+
+		// Dibujar plano cartesiano
+		
+		 g.drawLine(convertirPuntoX(0), convertirPuntoY(0),
+		 convertirPuntoX(0), convertirPuntoY(100));
+		 g.drawLine(convertirPuntoX(0), convertirPuntoY(0),
+		 convertirPuntoX(100), convertirPuntoY(0));
+		 
+		 g.drawLine(convertirPuntoX(0), convertirPuntoY(0),
+				 convertirPuntoX(-100), convertirPuntoY(-100));
+		 
+		Graphics2D g2 = (Graphics2D) g;
+		g2.setRenderingHint(
+                RenderingHints.KEY_ANTIALIASING, 
+                RenderingHints.VALUE_ANTIALIAS_ON); 
+		
+		double[][] matriz = new double[51][51];
+		double[][] matriz2 = new double[51][51];
+		int c = 0;
+		int c2 = 0;
+		for (double i = -10; i < 10; i = i + 0.2) {
+			for (double j = -10; j < 10; j = j + 0.2) {
+				double z = Math.log(Math.pow(j, 2) * Math.pow(i, 2));
+				double[] puntoInicial = {i, j, z};
+				double[] punto = operaciones.transformarR3(puntoInicial);
+				//g2.drawLine(convertirPuntoX(punto[0]), convertirPuntoY(punto[1]), convertirPuntoX(punto[0] + 0.1), convertirPuntoY(punto[1] + 0.1));
+				matriz[c][c2] = punto[0];
+				matriz2[c][c2] = punto[1];
+				System.out.println(punto[0] + " " + punto[1]);
+				c2++;
+			}
+			c++;
+			c2 = 0;
+		}
+		
+		for (int i = 0; i < matriz.length - 1; i++) {
+			for (int j = 0; j < matriz.length - 1; j++) {
+				g2.drawLine(convertirPuntoX(matriz[i][j]), convertirPuntoY(matriz2[i][j]),
+						convertirPuntoX(matriz[i][j + 1]), convertirPuntoY(matriz2[i][j + 1]));
+				g2.drawLine(convertirPuntoX(matriz[i][j]), convertirPuntoY(matriz2[i][j]),
+						convertirPuntoX(matriz[i + 1][j]), convertirPuntoY(matriz2[i + 1][j]));
+			}
+		}
+	}
+
+	private int convertirPuntoX(double x) {
+		double centro = this.getWidth() / 2.0;
+		return (int) (centro + x * ESCALA);
+	}
+
+	private int convertirPuntoY(double y) {
+		double centro = this.getHeight() / 2.0;
+		return (int) (centro - y * ESCALA);
+	}
+
+}
